@@ -8,7 +8,17 @@ import { RoomsService } from '../services/rooms.service';
 })
 export class PainelComponent implements OnInit {
 
-  salas: any;
+  salas = [
+  {numSala: '301B', emergencia: true},
+  {numSala: '302B', emergencia: false},
+  {numSala: '303B', emergencia: true},
+  {numSala: '304B', emergencia: false},
+  {numSala: '305B', emergencia: false},
+  {numSala: '306B', emergencia: true},
+  {numSala: '307B', emergencia: false},
+  {numSala: '308B', emergencia: true}
+];
+
 
 constructor(private room_service: RoomsService){
 
@@ -22,7 +32,7 @@ ngOnInit(){
 obterMapaSalas(){
 
   this.room_service.getSalas().subscribe(data => {
-    this.salas = data;
+    // this.salas = data;
   })
 
 }

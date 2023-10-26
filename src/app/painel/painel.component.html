@@ -1,8 +1,7 @@
-
-
-
-<div class="card estiloCard">
+<div class="d-flex flex-wrap margin card-container">
+  <div class="card estiloCard" *ngFor="let sala of salas" [ngClass]="{'verdadeEmergencia': sala.emergencia === true, 'naoVerdadeEmergencia' : sala.emergencia === false }">
     <div class="card-body">
-      <h5 class="card-title">SALA 303B</h5>
+      <h5 class="card-title centerText">{{sala.numSala}}</h5>
     </div>
   </div>
+</div>
