@@ -28,11 +28,44 @@
 }
 
 
-.verdadeEmergencia{
-  background-color: red;
-  color: white;
+// .verdadeEmergencia{
+//   background-color: red;
+//   color: white;
+// }
+
+// .naoVerdadeEmergencia{
+//     background-color: #4EC1DF;
+// }
+
+
+.noPulse {
+    height: 100px;
+    width: 100px;
+    background:  #4EC1DF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-.naoVerdadeEmergencia{
-    background-color: #4EC1DF;
+.pulse {
+    height: 100px;
+    width: 100px;
+    background:  rgba(255, 30, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    animation: pulse 0.7s linear infinite reverse;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 30, 0, 1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 50px rgba(255, 30, 0, 0);
+    }
+
 }

@@ -16,7 +16,8 @@ export class PainelComponent implements OnInit {
   {numSala: '305B', emergencia: false},
   {numSala: '306B', emergencia: true},
   {numSala: '307B', emergencia: false},
-  {numSala: '308B', emergencia: true}
+  {numSala: '308B', emergencia: true},
+  
 ];
 
 
