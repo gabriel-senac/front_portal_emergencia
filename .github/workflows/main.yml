@@ -1,12 +1,12 @@
-name: CI/CD para Projeto Angular
+name: CI/CD para Projeto Angular (Branch develop)
 
 on:
   push:
     branches:
-      - main
+      - develop
   pull_request:
     branches:
-      - main
+      - develop
 
 jobs:
   build:
@@ -48,4 +48,5 @@ jobs:
     steps:
       - name: Enviar Notificação
         # Adicione ações de notificação, como mensagens no Slack ou envio de e-mails
+
 
