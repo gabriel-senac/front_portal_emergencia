@@ -1,0 +1,7 @@
+<div class="d-flex flex-wrap margin card-container col-9 mx-auto">
+  <div class="card estiloCard pulse"  *ngFor="let sala of salas" [ngClass]="{'pulse': sala.emergencia === true, 'noPulse' : sala.emergencia === false }">
+    <div class="card-body">
+      <h5 class="card-title centerText">{{sala.numSala}}</h5>
+    </div>
+  </div>
+</div>
