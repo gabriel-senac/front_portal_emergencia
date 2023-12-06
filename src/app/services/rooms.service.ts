@@ -6,14 +6,18 @@ import { Injectable } from '@angular/core';
 })
 export class RoomsService {
 
-  private urlDominio = 'api.teste.com';
+  private urlDominio = 'https://back-emergencia.vercel.app';
 
   constructor(private http: HttpClient) { 
 
   }
 
 
-  getSalas(){
-    return this.http.get(this.urlDominio + "/salas")
+  getSalasBlocoA(){
+    return this.http.get(this.urlDominio + "/rooms/selecionarSalas/blocoA")
+  }
+
+  getSalasBlocoB(){
+    return this.http.get(this.urlDominio + "/rooms/selecionarSalas/blocoB")
   }
 }
