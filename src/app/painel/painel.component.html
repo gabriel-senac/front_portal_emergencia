@@ -1,7 +1,25 @@
+<h1 style="margin-left: 15rem; margin-top: 5rem;">BLOCO A </h1>
+
 <div class="d-flex flex-wrap margin card-container col-9 mx-auto">
-  <div class="card estiloCard pulse"  *ngFor="let sala of salas" [ngClass]="{'pulse': sala.emergencia === true, 'noPulse' : sala.emergencia === false }">
+  <div class="card estiloCard pulse"  *ngFor="let sala of salas" [ngClass]="{'pulse': sala.Emergencia === 1, 'noPulse' : sala.Emergencia === 0 }">
     <div class="card-body">
-      <h5 class="card-title centerText">{{sala.numSala}}</h5>
+      <h5 class="card-title centerText">{{sala.ID_Sala}}</h5>
     </div>
   </div>
 </div>
+
+
+<h1 style="margin-left: 15rem; margin-top: 5rem;">BLOCO B</h1>
+
+<div class="d-flex flex-wrap margin card-container col-9 mx-auto">
+  <div class="card estiloCard pulse"  *ngFor="let sala of salasB" [ngClass]="{'pulse': sala.Emergencia === 1, 'noPulse' : sala.Emergencia === 0 }">
+    <div class="card-body">
+      <h5 class="card-title centerText">{{sala.ID_Sala}}</h5>
+    </div>
+  </div>
+</div>
+
+<audio controls id="myAudio">
+  <source src="../../assets/EMERGENCY_ALARM.mp3" type="audio/mp3">
+  Seu navegador não suporta a tag de áudio.
+</audio>
