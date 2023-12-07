@@ -1,25 +1,30 @@
-<h1 style="margin-left: 15rem; margin-top: 5rem;">BLOCO A </h1>
+<!-- BLOCO A -->
+<h1 (click)="toggleBlock('A')" style="margin-left: 10rem; margin-top: 5rem; cursor: pointer;">
+  BLOCO A <span [class]="isBlockCollapsed('A') ? 'arrow-down' : 'arrow-up'"></span>
+</h1>
 
-<div class="d-flex flex-wrap margin card-container col-9 mx-auto">
-  <div class="card estiloCard pulse"  *ngFor="let sala of salas" [ngClass]="{'pulse': sala.Emergencia === 1, 'noPulse' : sala.Emergencia === 0 }">
+<div *ngIf="!isBlockCollapsed('A')" class="d-flex flex-wrap margin card-container col-10 mx-auto">
+  <div class="card estiloCard pulse" *ngFor="let sala of salas" [ngClass]="{'pulse': sala.Emergencia === 1, 'noPulse' : sala.Emergencia === 0 }">
     <div class="card-body">
       <h5 class="card-title centerText">{{sala.ID_Sala}}</h5>
     </div>
   </div>
 </div>
 
+<!-- BLOCO B -->
+<h1 (click)="toggleBlock('B')" style="margin-left: 10rem; margin-top: 5rem; cursor: pointer;">
+  BLOCO B <span [class]="isBlockCollapsed('B') ? 'arrow-down' : 'arrow-up'"></span>
+</h1>
 
-<h1 style="margin-left: 15rem; margin-top: 5rem;">BLOCO B</h1>
-
-<div class="d-flex flex-wrap margin card-container col-9 mx-auto">
-  <div class="card estiloCard pulse"  *ngFor="let sala of salasB" [ngClass]="{'pulse': sala.Emergencia === 1, 'noPulse' : sala.Emergencia === 0 }">
+<div *ngIf="!isBlockCollapsed('B')" class="d-flex flex-wrap margin card-container col-10 mx-auto">
+  <div class="card estiloCard pulse" *ngFor="let sala of salasB" [ngClass]="{'pulse': sala.Emergencia === 1, 'noPulse' : sala.Emergencia === 0 }">
     <div class="card-body">
       <h5 class="card-title centerText">{{sala.ID_Sala}}</h5>
     </div>
   </div>
 </div>
 
-<audio controls id="myAudio">
+<audio controls id="myAudio" hidden>
   <source src="../../assets/EMERGENCY_ALARM.mp3" type="audio/mp3">
   Seu navegador não suporta a tag de áudio.
 </audio>

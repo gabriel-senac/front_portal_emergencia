@@ -26,6 +26,7 @@ export class PainelComponent implements OnInit {
   salas: any;
   salasB: any
 
+  private collapsedBlocks: Set<string> = new Set<string>();
 
   constructor(private room_service: RoomsService) {
 
@@ -96,6 +97,18 @@ export class PainelComponent implements OnInit {
     this.audio.pause();
   }
 
+
+  toggleBlock(block: string): void {
+    if (this.isBlockCollapsed(block)) {
+      this.collapsedBlocks.delete(block);
+    } else {
+      this.collapsedBlocks.add(block);
+    }
+  }
+
+  isBlockCollapsed(block: string): boolean {
+    return this.collapsedBlocks.has(block);
+  }
 
 
 
