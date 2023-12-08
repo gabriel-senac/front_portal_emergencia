@@ -37,7 +37,7 @@ export class PainelComponent implements OnInit {
     this.obterMapaSalasBlocoA();
     this.obterMapaSalasBlocoB();
 
-    interval(2000).subscribe(() => {
+    interval(2500).subscribe(() => {
       this.obterMapaSalasBlocoA();
       this.obterMapaSalasBlocoB();
     });
