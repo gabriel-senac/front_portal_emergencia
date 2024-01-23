@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
 import { PainelComponent } from './painel.component';
 
@@ -8,14 +9,15 @@ describe('PainelComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PainelComponent]
+      declarations: [PainelComponent],
+      imports: [HttpClientModule],
     });
     fixture = TestBed.createComponent(PainelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('painel component criado', () => {
     expect(component).toBeTruthy();
   });
 });
