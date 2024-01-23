@@ -38,7 +38,10 @@ jobs:
 
     steps:
       - name: Deploy no Servidor
-        # Adicione suas etapas de implantação, como o envio dos arquivos para o servidor
+        run: |
+          # Adicione seus comandos de implantação aqui
+          # Exemplo usando rsync para enviar arquivos para um servidor
+          rsync -r --delete-after ${{ github.workspace }}/dist/ usuario@servidor:/caminho/para/implantacao/
 
   notify:
     name: Notificações
@@ -48,5 +51,3 @@ jobs:
     steps:
       - name: Enviar Notificação
         # Adicione ações de notificação, como mensagens no Slack ou envio de e-mails
-
-
