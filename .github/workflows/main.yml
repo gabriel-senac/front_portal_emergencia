@@ -27,3 +27,6 @@ jobs:
 
       - name: Construir o Projeto Angular
         run: npm run build
+
+      # - name: Testar o Projeto Angular
+      #   run: npm run test
