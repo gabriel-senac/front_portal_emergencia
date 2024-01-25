@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class RoomsService {
 
-  private urlDominio = 'https://back-emergencia.vercel.app';
+  urlDominio = 'https://back-emergencia.vercel.app';
 
   constructor(private http: HttpClient) { 
 
