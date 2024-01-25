@@ -1,18 +1,35 @@
-<h1 style="margin-left: 15rem; margin-top: 5rem;">BLOCO A </h1>
+<!-- BLOCO A -->
+<h1 class="title">BLOCO A</h1>
+<span  class="arrow" (click)="toggleBlock('A')">
+  <svg xmlns="http://www.w3.org/2000/svg" [class]="isBlockCollapsed('A') ? 'arrow-down' : 'arrow-up'" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-up-left" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M9.636 13.5a.5.5 0 0 1-.5.5H2.5A1.5 1.5 0 0 1 1 12.5v-10A1.5 1.5 0 0 1 2.5 1h10A1.5 1.5 0 0 1 14 2.5v6.636a.5.5 0 0 1-1 0V2.5a.5.5 0 0 0-.5-.5h-10a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h6.636a.5.5 0 0 1 .5.5"/>
+    <path fill-rule="evenodd" d="M5 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H6.707l8.147 8.146a.5.5 0 0 1-.708.708L6 6.707V10.5a.5.5 0 0 1-1 0z"/>
+  </svg>
+</span>
 
-<div class="d-flex flex-wrap margin card-container col-9 mx-auto">
-  <div class="card estiloCard pulse"  *ngFor="let sala of salas" [ngClass]="{'pulse': sala.Emergencia === 1, 'noPulse' : sala.Emergencia === 0 }">
+<div *ngIf="!isBlockCollapsed('A')" class="d-flex flex-wrap margin card-container col-10 mx-auto">
+  <div class="card estiloCard pulse" *ngFor="let sala of salas" [ngClass]="{'pulse': sala.Emergencia === 1, 'noPulse' : sala.Emergencia === 0 }">
     <div class="card-body">
       <h5 class="card-title centerText">{{sala.ID_Sala}}</h5>
     </div>
   </div>
 </div>
 
+<!-- BLOCO B -->
+<h1 class="title">
+  BLOCO B 
+</h1>
 
-<h1 style="margin-left: 15rem; margin-top: 5rem;">BLOCO B</h1>
 
-<div class="d-flex flex-wrap margin card-container col-9 mx-auto">
-  <div class="card estiloCard pulse"  *ngFor="let sala of salasB" [ngClass]="{'pulse': sala.Emergencia === 1, 'noPulse' : sala.Emergencia === 0 }">
+<span  class="arrow" (click)="toggleBlock('B')">
+  <svg xmlns="http://www.w3.org/2000/svg" [class]="isBlockCollapsed('A') ? 'arrow-down' : 'arrow-up'" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-up-left" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M9.636 13.5a.5.5 0 0 1-.5.5H2.5A1.5 1.5 0 0 1 1 12.5v-10A1.5 1.5 0 0 1 2.5 1h10A1.5 1.5 0 0 1 14 2.5v6.636a.5.5 0 0 1-1 0V2.5a.5.5 0 0 0-.5-.5h-10a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h6.636a.5.5 0 0 1 .5.5"/>
+    <path fill-rule="evenodd" d="M5 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H6.707l8.147 8.146a.5.5 0 0 1-.708.708L6 6.707V10.5a.5.5 0 0 1-1 0z"/>
+  </svg>
+</span>
+
+<div *ngIf="!isBlockCollapsed('B')" class="d-flex flex-wrap margin card-container col-10 mx-auto">
+  <div class="card estiloCard pulse" *ngFor="let sala of salasB" [ngClass]="{'pulse': sala.Emergencia === 1, 'noPulse' : sala.Emergencia === 0 }">
     <div class="card-body">
       <h5 class="card-title centerText">{{sala.ID_Sala}}</h5>
     </div>
@@ -20,6 +37,8 @@
 </div>
 
 <audio controls id="myAudio">
-  <source src="../../assets/EMERGENCY_ALARM.mp3" type="audio/mp3">
+  <source src="../../assets/emergency-alarm_.mp3" type="audio/mp3">
   Seu navegador não suporta a tag de áudio.
 </audio>
+
+<img class="logo-senac" src="../../assets/SENAC.svg.png" alt="">
